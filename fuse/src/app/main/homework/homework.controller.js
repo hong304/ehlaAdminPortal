@@ -26,6 +26,8 @@
           },
         ];
 
+        vm.testing = "abc";
+
         // Methods
 
         //////////

@@ -16,7 +16,7 @@
                 views  : {
                     'content@app': {
                         templateUrl: 'app/main/refund/refund.html',
-                        controller : 'refundController as vm'
+                        controller : 'RefundController as vm'
                     }
                 },
                 resolve: {
