@@ -1,5 +1,8 @@
 {
     "REFUND": {
         "REFUND_NAV": "Refund"
+    },
+    "MAIL":{
+      "SEND":"Send"
     }
 }

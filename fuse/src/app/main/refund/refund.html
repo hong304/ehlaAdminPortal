@@ -6,7 +6,7 @@
     <md-tabs md-dynamic-height>
       <md-tab label="Pending" ng-click="vm.filter('pending');">
         <md-tab-body>
-          <table class="dataTable row-border hover" datatable="ng">
+          <table class="dataTable row-border hover" datatable="ng" dt-options="vm.dtOptions">
             <thead>
             <tr>
               <th class="secondary-text">
@@ -49,8 +49,10 @@
               <td>{{ item.date }}</td>
               <td>{{ item.amount }}</td>
               <td>
-                <md-button ng-click="vm.rejectRefund(item)" class="md-raised">Reject</md-button>
-                <md-button ng-click="vm.acceptRefund(item)" class="md-raised md-primary">Accept</md-button>
+                <div layout="row">
+                  <md-button ng-click="vm.rejectDialog(item)" class="md-raised">Reject</md-button>
+                  <md-button ng-click="vm.acceptRefund(item)" class="md-raised md-primary md-default-theme md-accent">Accept</md-button>
+                </div>
               </td>
             </tr>
             </tbody>
@@ -59,7 +61,7 @@
       </md-tab>
       <md-tab label="Refunded">
         <md-tab-body>
-          <table class="dataTable row-border hover" datatable="ng">
+          <table class="dataTable row-border hover" datatable="ng" dt-options="vm.dtOptions">
             <thead>
             <tr>
               <th class="secondary-text">
@@ -101,9 +103,9 @@
           </table>
         </md-tab-body>
       </md-tab>
-      <md-tab label="Rejected" ng-click="vm.filter('rejected');">
+      <md-tab label="Rejected">
         <md-tab-body>
-          <table class="dataTable row-border hover" datatable="ng">
+          <table class="dataTable row-border hover" datatable="ng" dt-options="vm.dtOptions">
             <thead>
             <tr>
               <th class="secondary-text">
