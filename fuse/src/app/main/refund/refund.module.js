@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('app.refund', [])
+        .module('app.refund', ['datatables'])
         .config(config);
 
     /** @ngInject */

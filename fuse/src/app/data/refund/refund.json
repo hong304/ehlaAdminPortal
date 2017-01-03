@@ -1,5 +1,60 @@
 {
-    "data": {
-        "helloText": "Hello, I'm a sample page!"
-    }
+    "data": [
+      {
+        "id":"E-12345",
+        "username":"Mark So",
+        "item":"Primary 3 English Textbook for Beginner",
+        "date":"2016-11-11",
+        "amount":1499,
+        "status":"pending"
+      },
+      {
+        "id":"E-12346",
+        "username":"Sally Wong",
+        "item":"Mathematics Textbook 4",
+        "date":"2016-11-12",
+        "amount":3000,
+        "status":"pending"
+      },
+      {
+        "id":"E-12347",
+        "username":"Joyce Wong",
+        "item":"Advanced Physics Textbook 4",
+        "date":"2016-11-13",
+        "amount":246,
+        "status":"pending"
+      },
+      {
+        "id":"E-12348",
+        "username":"Joe Tam",
+        "item":"Chemistry Textbook 4",
+        "date":"2016-12-13",
+        "amount":800,
+        "status":"pending"
+      },
+      {
+        "id":"E-12349",
+        "username":"Joe Wong",
+        "item":"Chemistry Textbook 5",
+        "date":"2017-1-13",
+        "amount":512,
+        "status":"pending"
+      },
+      {
+        "id":"E-12350",
+        "username":"Mary Wong",
+        "item":"Story Book Collection for Children",
+        "date":"2016-12-22",
+        "amount":1800,
+        "status":"refunded"
+      },
+      {
+        "id":"E-12351",
+        "username":"Robert",
+        "item":"Biology Textbook 5",
+        "date":"2017-2-13",
+        "amount":2212,
+        "status":"rejected"
+      }
+    ]
 }

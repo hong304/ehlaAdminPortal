@@ -1,6 +1,158 @@
-<div ncy-breadcrumb></div>
-<h1>
-    This is refund page x
-  [from inline controller] vm.testing: {{vm.testing}}
-  [from data json] vm.hellowText: {{vm.item.helloText}}
-</h1>
+<div layout="column" class="doc-page material-docs layout-docs doc-template page-layout simple fullwidth ng-scope layout-column">
+
+  <div ncy-breadcrumb></div>
+
+  <div class="content">
+    <md-tabs md-dynamic-height>
+      <md-tab label="Pending" ng-click="vm.filter('pending');">
+        <md-tab-body>
+          <table class="dataTable row-border hover" datatable="ng">
+            <thead>
+            <tr>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Refund ID</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">User</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Item</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Date</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Amount</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Action</span>
+                </div>
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in ::vm.items_pending">
+              <td>{{ item.id }}</td>
+              <td>{{ item.username }}</td>
+              <td>{{ item.item }}</td>
+              <td>{{ item.date }}</td>
+              <td>{{ item.amount }}</td>
+              <td>
+                <md-button ng-click="vm.rejectRefund(item)" class="md-raised">Reject</md-button>
+                <md-button ng-click="vm.acceptRefund(item)" class="md-raised md-primary">Accept</md-button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </md-tab-body>
+      </md-tab>
+      <md-tab label="Refunded">
+        <md-tab-body>
+          <table class="dataTable row-border hover" datatable="ng">
+            <thead>
+            <tr>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Refund ID</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">User</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Item</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Date</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Amount</span>
+                </div>
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in ::vm.items_refunded">
+              <td>{{ item.id }}</td>
+              <td>{{ item.username }}</td>
+              <td>{{ item.item }}</td>
+              <td>{{ item.date }}</td>
+              <td>{{ item.amount }}</td>
+            </tr>
+            </tbody>
+          </table>
+        </md-tab-body>
+      </md-tab>
+      <md-tab label="Rejected" ng-click="vm.filter('rejected');">
+        <md-tab-body>
+          <table class="dataTable row-border hover" datatable="ng">
+            <thead>
+            <tr>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Refund ID</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">User</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Item</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Date</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Amount</span>
+                </div>
+              </th>
+              <th class="secondary-text">
+                <div class="table-header">
+                  <span class="column-title">Comment</span>
+                </div>
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in ::vm.items_rejected">
+              <td>{{ item.id }}</td>
+              <td>{{ item.username }}</td>
+              <td>{{ item.item }}</td>
+              <td>{{ item.date }}</td>
+              <td>{{ item.amount }}</td>
+              <td>{{ item.comment}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </md-tab-body>
+      </md-tab>
+
+    </md-tabs>
+  </div>
+
+</div>

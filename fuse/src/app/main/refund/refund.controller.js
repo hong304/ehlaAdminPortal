@@ -12,14 +12,23 @@
         var vm = this;
 
         // Data
-        // vm.helloText = UsersData.data.helloText;
-        vm.testing = "abc";
+        vm.items = RefundData.data;
+        vm.items_pending = _.filter(vm.items, function(item){
+          return item.status == 'pending';
+        });
+        vm.items_refunded = _.filter(vm.items, function(item){
+          return item.status == 'refunded';
+        });
+        vm.items_rejected = _.filter(vm.items, function(item){
+          return item.status == 'rejected';
+        });
 
-        vm.item = RefundData.data;
 
         // Methods
 
+
         //////////
-      console.log('in refund controller');
+        console.log('in refund controller');
+
     }
 })();
