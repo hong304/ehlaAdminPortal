@@ -39,5 +39,8 @@
 
       // Settings
       'app.settings',
+
+      // Refund
+      'app.refund'
     ]);
 })();
